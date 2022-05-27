@@ -1,0 +1,107 @@
+/*media query mixins interface*/
+
+////MOBILE INTERFACES
+@mixin headersMobile {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+    
+}
+
+@mixin menuNavMobile {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+    
+}
+
+@mixin  contentMobile {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+}
+
+@mixin galleryMobile {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+}
+
+@mixin  mutantsMobile {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+}
+@mixin  sceneGameMobile {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+}
+
+
+/////TABLET INTERFACES
+@mixin  headerTablets {
+    @media only screen and ( min-width:480px) and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin  galleryTablets {
+    @media only screen and ( min-width:480px) and (max-width:768px) {
+        @content;
+    }
+}
+
+
+@mixin  mutantsTablet {
+    @media only screen and ( min-width:480px) and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin  sceneTablet {
+    @media only screen and ( min-width:480px) and (max-width:768px) {
+        @content;
+    }
+}
+
+/////DESKTOP INTERFACES
+@mixin  desktopHeader {
+        @content;
+}
+
+@mixin  desktopContent {
+        @content;
+}
+
+@mixin  desktopMenus {
+        @content;
+}
+
+@mixin  desktopGallery {
+        @content;
+}
+
+@mixin  desktopSectionScene {
+        @content;
+}
+
+@mixin  desktopOtherMutants {
+        @content;
+}
+
+@mixin  desktopContact {
+        @content;
+}
+
+@mixin  desktopFooter {
+        @content;
+}
+
+///shadowdom leaves
+
+@mixin shadowDOM {
+    @media only screen and (max-width:480px) {
+        @content;
+    }
+}

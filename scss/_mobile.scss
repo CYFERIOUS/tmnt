@@ -1,0 +1,103 @@
+@import 'interfaces';
+/*mobile styles*/
+@include headersMobile{
+    
+    header{
+       
+           div.titles{
+               h1{
+                   font-family: 'Ninja Rush';
+                   font-size: 4rem;
+                   word-break: break-all;
+                   text-align: center;
+                   text-shadow: 0rem 0rem 1rem #FFF;
+               }
+               span{
+                  font-size: 3rem;
+                  text-align: center;
+                  animation: none;
+                  box-shadow:  inset 0rem 0rem 10rem green;
+               }
+           }           
+   }
+}
+@include menuNavMobile{
+  nav.menu{
+       ul{
+           padding: 1rem;
+           li {
+             
+               padding: 1rem;
+               margin-bottom: 0.4rem;
+               width: 100%;
+               text-align: center;
+           }
+       }
+   }
+}
+
+@include contentMobile{
+    article{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    article div.gallery{
+       flex: 1 1 100%;
+       flex-direction: column;
+       justify-items: center;
+       align-items: center;
+       
+    }
+    article aside{
+
+       align-self:baseline;
+       
+    }
+    
+}
+
+@include mutantsMobile{
+    .mutantex{
+        h1{
+            text-align: center;
+            color: #FFF;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 3rem;
+        }
+    }
+    section div.mutants{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        
+        .gridtest img{
+            margin: 1rem;
+            width: 250px;
+            height: auto;
+            box-shadow: 0rem 1rem 5rem black;
+        }
+
+    }
+}
+
+@include galleryMobile{
+    aside{
+        
+       display: none; 
+    }
+}
+
+@include sceneGameMobile{
+    section.scene{
+        
+      display: none;
+        
+    }
+}
+
+@include shadowDOM{
+    c-e{
+       display: none;
+    }
+}

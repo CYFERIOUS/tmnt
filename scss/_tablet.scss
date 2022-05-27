@@ -1,0 +1,77 @@
+@import 'interfaces';
+/*tablet styles*/
+@include headerTablets{
+   header{
+      div.titles{
+         width: 100%;
+         h1{
+            letter-spacing: 1rem;
+         }
+         span{
+            text-align: center;
+         }
+      }
+   }
+}
+@include galleryTablets{
+   article{
+      flex-wrap: wrap;
+      height: auto;
+      aside{
+         display: none;
+      }
+     
+  }
+  article div.gallery{
+   
+     flex: 1 1 100%;
+     flex-wrap: wrap;
+   
+     .tmntGal{
+         flex-basis: 50%;
+         display: flex;
+         justify-content: center;
+     }
+     
+  } 
+}
+
+@include mutantsTablet{
+   .mutantex{
+      h1{
+          text-align: center;
+          color: #FFF;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-size: 6rem;
+      }
+  }
+  section div.mutants{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      
+      .gridtest img{
+          margin: 1rem;
+          width: 250px;
+          height: auto;
+          box-shadow: 0rem 1rem 5rem black;
+      }
+  }
+}
+
+@include sceneTablet{
+   section.scene{
+      
+      display: none;
+      
+      
+  }
+
+}
+
+@include shadowDOM{
+   c-e{
+      display: none;
+   }
+}

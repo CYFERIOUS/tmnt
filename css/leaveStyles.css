@@ -1,0 +1,65 @@
+::slotted(h1) {
+    color:blueviolet;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0.5rem 0.5rem 0.5rem black;
+ }
+
+ ::slotted(div){
+
+    color:green;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0.5rem 0.5rem 0.5rem black;
+ }
+ :host{
+     padding: 3rem;
+   background-color: red;
+ }
+ :host(.hostEst){
+   color:white;
+   font-weight: bolder;
+ }
+ :host-context(section){
+    text-align: center;
+  }
+ 
+ header{
+     width: 100%;
+     background:url('../../images/krang.jpg');
+    
+ }
+ h1,span{
+     text-align: center;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     color: white;
+    text-shadow: 1rem 1rem 0.5rem black;
+ }
+ 
+ svg{
+  position: absolute;
+  animation: moveNinja 3s ease-in-out 1s infinite;
+ }
+
+ @keyframes moveNinja {
+   0%{
+      transform: translateX(-300%) rotateY(0deg);
+      opacity: 1;
+   }
+   45%{
+    transform: rotateY(0deg);
+    opacity: 0.2;
+   }
+   50%{
+    transform: translateX(50%) rotateY(180deg);
+    opacity: 0;
+   }
+
+   100%{
+    transform: translateX(300%) rotateY(180deg);
+    opacity: 1;
+   }
+ }
+
+ h1{
+   
+   text-align: center;    
+}
