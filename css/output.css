@@ -658,6 +658,9 @@ footer p {
     text-transform: capitalize;
     margin-right: 0.4rem;
   }
+  header .burguer div.menuAcc a:nth-child(4), header .burguer div.menuAcc a:nth-child(5) {
+    display: none;
+  }
   header .burguer div.lines {
     flex: 1;
     width: 2.5rem;
