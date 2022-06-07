@@ -98,6 +98,11 @@
         @content;
 }
 
+@mixin  pizzamaker {
+    @content;
+    
+}
+
 ///shadowdom leaves
 
 @mixin shadowDOM {
