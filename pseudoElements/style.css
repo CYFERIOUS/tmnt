@@ -1,0 +1,291 @@
+body{
+    background-color: whitesmoke;
+}
+
+/*PSEUDO ELEMENTOS</h1>*/
+
+.after::after{
+    content: " <- agregao!";
+    color: green;
+}
+
+.back-drop{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: beige;
+}
+.back-drop::backdrop{
+    position: relative;
+    background-color: #448;
+    width: 400px;
+    height: 400px;
+}
+
+.before::before{
+    content: '#169';
+}
+
+.pL + p::first-letter{
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    box-shadow: 3px 3px 0 red;
+    font-size: 250%;
+    padding: 6px 3px;
+    margin-right: 6px;
+    float: left;
+}
+
+.fl::first-line{
+    color: brown;
+    text-transform: uppercase;
+}
+
+.fsb::file-selector-button{
+    color: cadetblue;
+    background-color: black;
+}
+
+ul li::marker{
+    color: darkorange;
+    font-size: x-large;
+}
+
+c-e::part(textspan) {
+    /* Styles to apply to the `foo` part */
+    text-transform:uppercase;
+  }
+
+
+.targo p::target-text{
+    background-color: rebeccapurple;
+    color: white;
+  }
+ 
+
+  /*PSEUDO CLASSES</h1>*/
+
+  .btn:active{
+        background-color: blueviolet;
+  }
+
+  .linkStyle a:any-link{
+      color: green;
+  }
+
+  .autof input {
+    border: 3px solid blue;
+    border-radius: 3px;
+  }
+
+  /*autofill*/
+  .autof input:-webkit-autofill {
+     border: 8px solid green;
+      
+  }
+
+  /* checked */
+  .chekiao input[type="radio"]:checked {
+    box-shadow: 0 0 0 3px orange;
+  }
+  
+  
+  .chekiao input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 3px hotpink;
+  }
+  .chekiao select {
+    margin: 8px;
+  }
+  .chekiao option:checked{
+      box-shadow: 0 0 0 3px lime;
+      color: red;
+  }
+
+  .chekiao input:default + label {
+    color: coral;
+  }
+
+  /*defined*/
+  c-e:defined {
+    font-style: italic;
+  }
+
+
+/*disabled*/
+.diseg input[type="text"]:disabled{
+    background-color: #ccc;
+}
+
+
+/*empty*/
+.vacuum div{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.vacuum div:empty{
+    background-color: chartreuse;
+}
+
+
+/*enabled*/
+.eneas input[type="text"]:enabled{
+    background-color: aqua;
+}
+
+/*first*/
+@page:first {
+    margin-left: 50%;
+    
+  }
+  
+  .prima p {
+    page-break-after: always;
+  }
+
+
+  /*first child*/
+
+.fch p:first-child{
+    background-color: black;
+    color: aliceblue;
+}
+
+ /*firstof type*/
+.fot h1:first-of-type{
+     color: blue;
+     font-style: italic;
+
+}
+
+ /*fullscreen*/
+#fs-toggle:fullscreen {
+    background-color: #faa;
+  }
+
+/*focus*/
+  .hocus-focus :first-child:focus {
+    background: yellow;
+    color: red;
+  }
+  .hocus-focus >.seconth:focus {
+    background: blue;
+    color: red;
+  }
+
+  /*focus visible*/
+
+  .focuVis > input, button {
+    margin: 10px;
+  }
+  
+  .focuVis > .focus-only:focus {
+    outline: 2px solid black;
+  }
+  
+  .focuVis > .focus-visible-only:focus-visible {
+    outline: 4px dashed darkorange;
+  }
+  
+  /*focus visible*/
+
+  .focusInside:focus-within{
+    background-color: aquamarine;
+  }
+
+  /*hover*/
+  e-ch:hover{
+    background-color: brown;
+    cursor: pointer;
+  }
+
+  /*indeterminate*/
+  input.checkIndet:indeterminate{
+    box-shadow: 0 0 1px 1px red;
+  }
+
+  input.checkIndet:indeterminate + label{
+    background-color: red;
+  }
+
+  input.radioIndet:indeterminate{
+    box-shadow: 0 0 1px 1px red;
+  }
+
+  input.radioIndet:indeterminate + label{
+    background-color:  red;
+  }
+
+  progress.proIndet:indeterminate{
+    width:80vw;
+    height:20px;
+    
+  }
+
+  /*in range*/
+  .rango input:in-range {
+    background-color: rgba(0, 255, 0, 0.25);
+  }
+  
+  .rango input:out-of-range {
+    background-color: rgba(255, 0, 0, 0.25);
+    border: 2px solid red;
+  }
+  
+  .rango input:in-range + label::after {
+    content: 'okay.';
+  }
+  
+  .rango input:out-of-range + label::after {
+    content: 'out of range!';
+  }
+
+  /*invalid*/
+
+   label.field {
+    display: block;
+    margin: 1px;
+    padding: 1px;
+  }
+  
+  .invalido .field {
+    margin: 1px;
+    padding: 1px;
+  }
+  
+  .invalido .field>input:invalid {
+    background-color: #ffdddd;
+  }
+  
+  .invalido>form:invalid {
+    border: 5px solid #ffdddd;
+  }
+  
+  .invalido input:valid {
+    background-color: #ddffdd;
+  }
+  
+  .invalido form:valid {
+    border: 5px solid #ddffdd;
+  }
+  
+  .invalido input:required {
+    border-color: #800000;
+    border-width: 3px;
+  }
+  
+  .invalido input:required:invalid {
+    border-color: #c00000;
+  }
+
+  /*is*/
+
+  .isGroup:is(p,div,label){
+    background-color: darksalmon;
+
+  }
+
+
+

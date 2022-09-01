@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+<title>PseudoElements</title>
+</head>
+<body>
+  <h1>PSEUDO ELEMENTOS</h1>
+<h1>This is a Heading</h1>
+<p class="after">after</p>
+<div class="back-drop"></div>
+<p class="before">before</p>
+<h2 class="pL">My heading</h2>
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+  ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+  dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+
+<div class="fl">
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+    dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.
+  Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+</div>
+<br>
+<input class="fsb" type="file">
+
+<br>
+<ul>
+  <li>Peaches</li>
+  <li>Apples</li>
+  <li>Plums</li>
+</ul>
+
+<template id="c-e">
+  <style>
+    ::slotted(*) {
+       color:green;
+    }
+    :host{
+      background-color: aquamarine;
+    }
+    :host(.hostEst){
+      color:blueviolet;
+      font-weight: bolder;
+    }
+    :host-context(h1){
+      text-decoration: underline;
+      color:gold;
+    }
+    
+  </style>
+  
+  <span part="textspan">This text will be colored</span>
+  
+  <slot></slot>
+</template>
+
+
+<template id="E-CH">
+  <span>de otro template</span>
+</template>
+
+
+<c-e>
+  <ul>
+    <li><slot name="person-age">AGE MISSING</slot></li>
+    <li><slot name="person-occupation">OCCUPATION MISSING</slot></li>
+  </ul>
+</c-e>
+<br>
+<c-e class="hostEst">
+  ok host("withparameter")
+</c-e>
+<br>
+<div>
+  <h1><c-e>context</c-e></h1>
+</div>
+
+
+<e-ch></e-ch>
+
+
+
+
+
+
+
+
+
+<div class="targo" id="target">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis suscipit libero. 
+  Vivamus posuere, risus ac venenatis pellentesque, orci mi sollicitudin metus, 
+  sit amet hendrerit lorem dolor non nunc. Ut ut lorem non ligula tempus tincidunt. 
+  Ut sem augue, convallis sit amet feugiat id, dignissim sit amet dui. 
+  Morbi id bibendum tellus. Pellentesque quis orci sed arcu volutpat rhoncus. 
+  Cras vehicula tortor sit amet magna consectetur, non vehicula nunc dignissim. 
+  Ut molestie faucibus odio. Nunc et turpis luctus, fringilla risus non, scelerisque massa. 
+  Donec ac mattis quam. Aliquam erat volutpat. Suspendisse sit amet malesuada dui.</p>
+</div>
+
+<h1>PSEUDO CLASSES</h1>
+
+<button class="btn">:active</button>
+<div class="linkStyle">
+  <a href="#">link</a>
+</div>
+<br>
+<div class="autof">
+  <input type="email" name="email" id="email" autocomplete="email" placeholder="popo@nene.com">
+</div>
+
+<br>
+<div class="chekiao"> 
+  <div>
+    <input type="radio" name="my-input" id="yes" checked>
+    <label for="yes">Yes</label>
+  
+    <input type="radio" name="my-input" id="no">
+    <label for="no">No</label>
+  </div>
+  
+  <div>
+    <input type="checkbox" name="my-checkbox" id="opt-in">
+    <label for="opt-in">Check me!</label>
+  </div>
+
+  <select name="my-select" id="fruit">
+    <option value="opt1">Apples</option>
+    <option value="opt2">Grapes</option>
+    <option value="opt3">Pears</option>
+  </select>
+</div>
+
+<br>
+
+<div class="diseg">
+  <input type="text" placeholder="disabled eg" disabled>
+</div>
+
+<br>
+<div class="vacuum">
+    <div>lleno</div>
+    <div><!--chichi--></div>
+    <div>lleno</div>
+</div>
+
+<br>
+
+<div class="eneas">
+  <h5>enabled</h5><br>
+  <input type="text" disabled><br>
+  <input type="text" enabled>
+</div>
+
+<br>
+
+<div class="prima">
+  <p>first page</p>
+  <p>second page</p>
+  <p>third page</p>
+  <button id="print">print</button>
+</div>
+
+<br>
+
+<div class="fch">
+  <p>firstchild</p>
+  <p>secondchild</p>
+</div>
+
+<br>
+
+<div class="fot">
+
+  <h1>primer h1</h1>
+  <h1>segundo h1</h1>
+  <h2>primer h2</h2>
+  <h2>segundo h2</h2>
+  <h3>primer h3</h3>
+  <h3>segundo h3</h3>
+
+</div>
+
+
+<br>
+
+<div class="fs">
+  <button id="fs-toggle">solo funciona en firefox esta pseudoclase fullscreen</button>
+</div>
+
+
+<br>
+
+<div class="hocus-focus">
+  <input value="I'll be red when focused.">
+  <input class="seconth"value="I'll be blue when focused.">
+</div>
+
+<br>
+
+<div class="focuVis">
+  <input value="Default styles"><br>
+  <button>Default styles</button><br>
+  <input class="focus-only" value=":focus only"><br>
+  <button class="focus-only">:focus only</button><br>
+  <input class="focus-visible-only" value=":focus-visible only"><br>
+  <button class="focus-visible-only">:focus-visible only</button>
+</div>
+
+<br>
+
+
+<div class="focusInside">
+  <input value="focuswithin"><br>
+  <input value="focuswithin"><br>
+</div>
+
+<br>
+
+
+<div>
+  <fieldset>
+    <input type="checkbox" id="checkbox" class="checkIndet">
+    <label for="checkbox">This checkbox label starts out red.</label>
+  </fieldset>
+  <fieldset>
+    <input type="radio" id="radio1" name="radioButton" class="radioIndet">
+    <label for="radio1">First radio label starts out lime.
+  </fieldset>
+  <fieldset>
+    <progress class="proIndet"></progress>
+  </fieldset>
+</div>
+
+<br>
+
+<div class="rango">
+  <p>Values between 1 and 10 are valid.</p>
+  <input id="value1" name="value1" type="number" placeholder="1 to 10" min="1" max="10" value="12" required>
+  <label for="value1">Your value is </label>
+</div>
+
+
+<br>
+<div class="invalido">
+  <form>
+    <div class="field">
+      <label for="url_input">Enter a URL:</label>
+      <input type="url" id="url_input">
+    </div>
+  
+    <div class="field">
+      <label for="email_input">Enter an email address:</label>
+      <input type="email" id="email_input" required>
+    </div>
+  </form>
+</div>
+
+<br>
+
+<div class="isGroup">
+  <p>is()</p>
+  <div>any()</div>
+  <label>matches()</label>
+</div>
+
+
+
+<script type="text/javascript">
+
+let template1 = document.querySelector("#c-e");
+globalThis.customElements.define(template1.id, class extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.appendChild(template1.content.cloneNode(true)); 
+  }
+});
+
+class Element extends HTMLElement {
+  constructor() {
+    super();
+    let template2 = document.getElementById(this.nodeName);
+    this.attachShadow({
+      mode: 'open'
+    }).append(template2.content.cloneNode(true));
+  }
+}
+window.customElements.define('e-ch', Element);
+
+document.getElementById("print").addEventListener('click', () => {
+  window.print();
+});
+
+const checkbox = document.getElementById("checkbox");
+checkbox.indeterminate = true;
+
+const radioButton = document.getElementById("radio1");
+radioButton.indeterminate = true;
+</script>
+</body>
+</html>
